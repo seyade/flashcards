@@ -34,14 +34,12 @@ const CardContent = styled.div`
 
 const CardPrompt = styled.div`
   display: inline-block;
-  width: 50%;
-  text-align: left;
+  text-align: center;
 `;
 
 const CardAnswer = styled.div`
   display: inline-block;
-  width: 50%;
-  text-align: right;
+  text-align: center;
 `;
 
 export class Card extends Component {

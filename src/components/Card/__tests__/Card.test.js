@@ -1,13 +1,15 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { Card } from './Card';
+import { Card } from '../index';
 
 configure({ adapter: new Adapter() });
 
 const props = {
   card: {
+    id: 0,
     prompt: 'test prompt',
     answer: 'test answer',
   },
@@ -15,6 +17,11 @@ const props = {
 
 describe('Card', () => {
   const card = shallow(<Card {...props} />);
+
+  it('renders correctly', () => {
+    const tree = renderer.create(card).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 
   it('sets `reveal` to be `false`', () => {
     expect(card.state().reveal).toBe(false);

@@ -16,32 +16,6 @@ const CardContainer = styled.div`
   cursor: pointer;
 `;
 
-const CardHeader = styled.div`
-  width: 100%;
-  height: 240px;
-  padding: 40px;
-  background-color: #ffce00;
-`;
-
-const CardContent = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const CardPrompt = styled.div`
-  display: inline-block;
-  text-align: center;
-`;
-
-const CardAnswer = styled.div`
-  display: inline-block;
-  text-align: center;
-`;
-
 export class Card extends Component {
   constructor() {
     super();
@@ -62,18 +36,18 @@ export class Card extends Component {
 
     return (
       <CardContainer onClick={this.revealAnswer}>
-        <CardHeader>
-          <CardPrompt>
+        <div className="card__header">
+          <div className="card__prompt">
             <h4>{prompt}</h4>
-          </CardPrompt>
-        </CardHeader>
-        <CardContent>
-          <CardAnswer>
+          </div>
+        </div>
+        <div className="card__content">
+          <div className="card__answer">
             <h4 className={this.state.reveal ? 'text-revealed' : 'text-hidden'}>
               {answer}
             </h4>
-          </CardAnswer>
-        </CardContent>
+          </div>
+        </div>
       </CardContainer>
     );
   }

@@ -4,7 +4,6 @@ import { read_cookie } from 'sfcookies';
 import { connect } from 'react-redux';
 
 // import stacks from '../data/stacks.json';
-
 import { setStack, loadStack } from '../../actions';
 
 const COOKIES_KEY = 'flashcards';
@@ -31,19 +30,15 @@ export class StackList extends Component {
   renderStacksCategory() {
     return (
       <div className="stack-categories">
-        {this.props.stacks.map(stack => {
-          console.log('STACKLIST', stack);
-
-          return (
-            <Link
-              to="/stack"
-              key={stack.id}
-              onClick={() => this.props.setStack(stack)}
-            >
-              <h4>{stack.title}</h4>
-            </Link>
-          );
-        })}
+        {this.props.stacks.map((stack, index) => (
+          <Link
+            to="/stack"
+            key={index}
+            onClick={() => this.props.setStack(stack)}
+          >
+            <h4>{stack.title}</h4>
+          </Link>
+        ))}
       </div>
     );
   }

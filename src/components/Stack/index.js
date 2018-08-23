@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Card from '../Card';
 import styled from 'styled-components';
+
+import Card from '../Card';
 
 const StackListContainer = styled.div`
   display: flex;

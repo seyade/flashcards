@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders correctly 1`] = `
+<div
+  className="sc-bdVaJa gkVvnR"
+  onClick={[Function]}
+>
+  <div
+    className="card__header"
+  >
+    <div
+      className="card__prompt"
+    >
+      <h4>
+        test prompt
+      </h4>
+    </div>
+  </div>
+  <div
+    className="card__content"
+  >
+    <div
+      className="card__answer"
+    >
+      <h4
+        className="text-hidden"
+      >
+        test answer
+      </h4>
+    </div>
+  </div>
+</div>
+`;

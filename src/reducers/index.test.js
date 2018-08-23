@@ -24,11 +24,11 @@ describe('Root reducers', () => {
   it('adds a stack', () => {
     const testStack = { title: 'data', cards: [] };
 
-    expect(rootReducer({}, { type: actions.ADD_STACK, stack })).toEqual({
+    expect(
+      rootReducer({}, { type: actions.ADD_STACK, stack: testStack })
+    ).toEqual({
       stack: {},
       stacks: [{ ...testStack, id: 0 }],
     });
-
-    // return [...state, { ...action.stack, id: state.length }];
   });
 });

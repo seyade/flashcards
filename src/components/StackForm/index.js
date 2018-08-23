@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import {
   Form,
   FormGroup,
@@ -9,7 +10,6 @@ import {
 } from 'react-bootstrap';
 import { delete_cookie } from 'sfcookies';
 
-import { connect } from 'react-redux';
 import { addStack } from '../../actions';
 
 const COOKIES_KEY = 'flashcards';

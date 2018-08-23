@@ -2,8 +2,8 @@ import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { StackForm } from '.';
-import { stacks } from '../../data/fixtures';
+import { StackForm } from '../index';
+import { stacks } from '../../../data/fixtures';
 
 configure({ adapter: new Adapter() });
 

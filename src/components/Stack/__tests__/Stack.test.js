@@ -2,8 +2,8 @@ import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { Stack } from './Stack';
-import { stack } from '../data/fixtures';
+import { Stack } from '../index';
+import { stack } from '../../../data/fixtures';
 
 configure({ adapter: new Adapter() });
 

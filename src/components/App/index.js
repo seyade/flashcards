@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import StackList from './StackList';
+import StackList from '../StackList';
 
 export const App = () => {
   return (

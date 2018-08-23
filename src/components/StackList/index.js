@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 // import stacks from '../data/stacks.json';
 
-import { setStack, loadStack } from '../actions';
+import { setStack, loadStack } from '../../actions';
 
 const COOKIES_KEY = 'flashcards';
 

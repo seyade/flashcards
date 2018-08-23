@@ -10,7 +10,7 @@ import {
 import { delete_cookie } from 'sfcookies';
 
 import { connect } from 'react-redux';
-import { addStack } from '../actions';
+import { addStack } from '../../actions';
 
 const COOKIES_KEY = 'flashcards';
 

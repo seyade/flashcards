@@ -2,6 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Card from '../Card';
+import styled from 'styled-components';
+
+const StackListContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+`;
 
 export const Stack = ({ stack: { title, cards } }) => {
   return (
@@ -11,11 +19,11 @@ export const Stack = ({ stack: { title, cards } }) => {
       </Link>
       <h3>{title}</h3>
       <br />
-      <div className="stack-list">
+      <StackListContainer>
         {cards.map(card => (
           <Card key={card.id} card={card} />
         ))}
-      </div>
+      </StackListContainer>
     </div>
   );
 };
